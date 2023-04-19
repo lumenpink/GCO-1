@@ -1,37 +1,37 @@
 <?php
    /**
-    * Gerenciador Cl�nico Odontol�gico
+    * Gerenciador Clï¿½nico Odontolï¿½gico
     * Copyright (C) 2006 - 2009
     * Autores: Ivis Silva Andrade - Engenharia e Design(ivis@expandweb.com)
-    *          Pedro Henrique Braga Moreira - Engenharia e Programa��o(ikkinet@gmail.com)
+    *          Pedro Henrique Braga Moreira - Engenharia e Programaï¿½ï¿½o(ikkinet@gmail.com)
     *
-    * Este arquivo � parte do programa Gerenciador Cl�nico Odontol�gico
+    * Este arquivo ï¿½ parte do programa Gerenciador Clï¿½nico Odontolï¿½gico
     *
-    * Gerenciador Cl�nico Odontol�gico � um software livre; voc� pode
-    * redistribu�-lo e/ou modific�-lo dentro dos termos da Licen�a
-    * P�blica Geral GNU como publicada pela Funda��o do Software Livre
-    * (FSF); na vers�o 2 da Licen�a invariavelmente.
+    * Gerenciador Clï¿½nico Odontolï¿½gico ï¿½ um software livre; vocï¿½ pode
+    * redistribuï¿½-lo e/ou modificï¿½-lo dentro dos termos da Licenï¿½a
+    * Pï¿½blica Geral GNU como publicada pela Fundaï¿½ï¿½o do Software Livre
+    * (FSF); na versï¿½o 2 da Licenï¿½a invariavelmente.
     *
-    * Este programa � distribu�do na esperan�a que possa ser �til,
-    * mas SEM NENHUMA GARANTIA; sem uma garantia impl�cita de ADEQUA��O
-    * a qualquer MERCADO ou APLICA��O EM PARTICULAR. Veja a
-    * Licen�a P�blica Geral GNU para maiores detalhes.
+    * Este programa ï¿½ distribuï¿½do na esperanï¿½a que possa ser ï¿½til,
+    * mas SEM NENHUMA GARANTIA; sem uma garantia implï¿½cita de ADEQUAï¿½ï¿½O
+    * a qualquer MERCADO ou APLICAï¿½ï¿½O EM PARTICULAR. Veja a
+    * Licenï¿½a Pï¿½blica Geral GNU para maiores detalhes.
     *
-    * Voc� recebeu uma c�pia da Licen�a P�blica Geral GNU,
-    * que est� localizada na ra�z do programa no arquivo COPYING ou COPYING.TXT
-    * junto com este programa. Se n�o, visite o endere�o para maiores informa��es:
-    * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Ingl�s)
-    * http://www.magnux.org/doc/GPL-pt_BR.txt (Portugu�s - Brasil)
+    * Vocï¿½ recebeu uma cï¿½pia da Licenï¿½a Pï¿½blica Geral GNU,
+    * que estï¿½ localizada na raï¿½z do programa no arquivo COPYING ou COPYING.TXT
+    * junto com este programa. Se nï¿½o, visite o endereï¿½o para maiores informaï¿½ï¿½es:
+    * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Inglï¿½s)
+    * http://www.magnux.org/doc/GPL-pt_BR.txt (Portuguï¿½s - Brasil)
     *
-    * Em caso de d�vidas quanto ao software ou quanto � licen�a, visite o
-    * endere�o eletr�nico ou envie-nos um e-mail:
+    * Em caso de dï¿½vidas quanto ao software ou quanto ï¿½ licenï¿½a, visite o
+    * endereï¿½o eletrï¿½nico ou envie-nos um e-mail:
     *
     * http://www.smileodonto.com.br/gco
     * smile@smileodonto.com.br
     *
-    * Ou envie sua carta para o endere�o:
+    * Ou envie sua carta para o endereï¿½o:
     *
-    * Smile Odontol�ogia
+    * Smile Odontolï¿½ogia
     * Rua Laudemira Maria de Jesus, 51 - Lourdes
     * Arcos - MG - CEP 35588-000
     *
@@ -47,7 +47,7 @@
 	}
     if($_GET['confirm_baixa'] == "baixa") {
         mysql_query("UPDATE orcamento SET baixa = '1' WHERE codigo = ".$_GET['codigo_orc']) or die('Line 39: '.mysql_error());
-        echo '<script>alert("Parcelas restantes do or�amento canceladas com sucesso!")</script>';
+        echo '<script>alert("Parcelas restantes do orï¿½amento canceladas com sucesso!")</script>';
     }
 	$acao = '&acao=editar';
 	$strLoCase = encontra_valor('pacientes', 'codigo', $_GET['codigo'], 'nome').' - '.$_GET['codigo'];
@@ -59,7 +59,7 @@
         //echo '<pre>';
         //print_r($_POST);
         //echo '</pre>';
-		//Altera��o de procedimentos
+		//Alteraï¿½ï¿½o de procedimentos
 		if(is_array($_POST['codigoprocedimento'])) {
 			foreach($_POST['codigoprocedimento'] as $codigo => $codigoprocedimento) {
 				$dente = $_POST['dente'][$codigo];
@@ -82,7 +82,7 @@
 			mysql_query("INSERT INTO `procedimentos_orcamento` (`codigo_orcamento`, `codigoprocedimento`, `dente`, `descricao`, `particular`, `convenio`) VALUES ('".$codigo_orc."', '".$_POST['codigoprocedimento_new']."', '".$_POST['dente_new']."', '".$_POST['descricao_new']."', '".$_POST['particular_new']."', '".$_POST['convenio_new']."')") or die(mysql_error());
 		}
 		$row = mysql_fetch_array(mysql_query("SELECT * FROM `orcamento` WHERE `codigo` = '".$codigo_orc."'"));
-		//Atualizando os dados gerais do or�amento
+		//Atualizando os dados gerais do orï¿½amento
 		if(isset($_POST['aserpago'])) {
 			if(empty($_POST['desconto']))
 				$_POST['desconto'] = 0;
@@ -101,7 +101,7 @@
 				mysql_query("INSERT INTO `parcelas_orcamento` (`codigo_orcamento`, `datavencimento`, `valor`) VALUES ('".$codigo_orc."', '".converte_data($datavencimento, 1)."', '".$valor."')") or die(mysql_error());
 			}
 		}
-		//Confirmando or�amento
+		//Confirmando orï¿½amento
 		if(isset($_POST['Salvar222']) && isset($_POST['confirmed'])) {
             //var_dump($_POST['confirmed']); die();
     	    mysql_query("UPDATE orcamento SET confirmado = '".$_POST['confirmed']."' WHERE `codigo` = '".$codigo_orc."'") or die('Line 91: '.mysql_error());
@@ -384,7 +384,7 @@
                 //$efetuar = '<input type="submit" class="forms" name="efetuar['.$row1['codigo'].']" value="Efetuar pagamento">';
                 $efetuar = '<a href="javascript:Ajax(\'pagamentos/parcelas\', \'conteudo\', \'codigo='.$row1['codigo'].'\')">Efetuar pagamento</a> ';
             } elseif($disable == 'disabled') {
-                $efetuar = 'Pagamento j� realizado!';
+                $efetuar = 'Pagamento jï¿½ realizado!';
             }
             $total_final += $valor;
 

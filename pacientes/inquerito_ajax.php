@@ -1,37 +1,37 @@
 <?php
    /**
-    * Gerenciador Cl�nico Odontol�gico
+    * Gerenciador Clï¿½nico Odontolï¿½gico
     * Copyright (C) 2006 - 2009
     * Autores: Ivis Silva Andrade - Engenharia e Design(ivis@expandweb.com)
-    *          Pedro Henrique Braga Moreira - Engenharia e Programa��o(ikkinet@gmail.com)
+    *          Pedro Henrique Braga Moreira - Engenharia e Programaï¿½ï¿½o(ikkinet@gmail.com)
     *
-    * Este arquivo � parte do programa Gerenciador Cl�nico Odontol�gico
+    * Este arquivo ï¿½ parte do programa Gerenciador Clï¿½nico Odontolï¿½gico
     *
-    * Gerenciador Cl�nico Odontol�gico � um software livre; voc� pode
-    * redistribu�-lo e/ou modific�-lo dentro dos termos da Licen�a
-    * P�blica Geral GNU como publicada pela Funda��o do Software Livre
-    * (FSF); na vers�o 2 da Licen�a invariavelmente.
+    * Gerenciador Clï¿½nico Odontolï¿½gico ï¿½ um software livre; vocï¿½ pode
+    * redistribuï¿½-lo e/ou modificï¿½-lo dentro dos termos da Licenï¿½a
+    * Pï¿½blica Geral GNU como publicada pela Fundaï¿½ï¿½o do Software Livre
+    * (FSF); na versï¿½o 2 da Licenï¿½a invariavelmente.
     *
-    * Este programa � distribu�do na esperan�a que possa ser �til,
-    * mas SEM NENHUMA GARANTIA; sem uma garantia impl�cita de ADEQUA��O
-    * a qualquer MERCADO ou APLICA��O EM PARTICULAR. Veja a
-    * Licen�a P�blica Geral GNU para maiores detalhes.
+    * Este programa ï¿½ distribuï¿½do na esperanï¿½a que possa ser ï¿½til,
+    * mas SEM NENHUMA GARANTIA; sem uma garantia implï¿½cita de ADEQUAï¿½ï¿½O
+    * a qualquer MERCADO ou APLICAï¿½ï¿½O EM PARTICULAR. Veja a
+    * Licenï¿½a Pï¿½blica Geral GNU para maiores detalhes.
     *
-    * Voc� recebeu uma c�pia da Licen�a P�blica Geral GNU,
-    * que est� localizada na ra�z do programa no arquivo COPYING ou COPYING.TXT
-    * junto com este programa. Se n�o, visite o endere�o para maiores informa��es:
-    * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Ingl�s)
-    * http://www.magnux.org/doc/GPL-pt_BR.txt (Portugu�s - Brasil)
+    * Vocï¿½ recebeu uma cï¿½pia da Licenï¿½a Pï¿½blica Geral GNU,
+    * que estï¿½ localizada na raï¿½z do programa no arquivo COPYING ou COPYING.TXT
+    * junto com este programa. Se nï¿½o, visite o endereï¿½o para maiores informaï¿½ï¿½es:
+    * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Inglï¿½s)
+    * http://www.magnux.org/doc/GPL-pt_BR.txt (Portuguï¿½s - Brasil)
     *
-    * Em caso de d�vidas quanto ao software ou quanto � licen�a, visite o
-    * endere�o eletr�nico ou envie-nos um e-mail:
+    * Em caso de dï¿½vidas quanto ao software ou quanto ï¿½ licenï¿½a, visite o
+    * endereï¿½o eletrï¿½nico ou envie-nos um e-mail:
     *
     * http://www.smileodonto.com.br/gco
     * smile@smileodonto.com.br
     *
-    * Ou envie sua carta para o endere�o:
+    * Ou envie sua carta para o endereï¿½o:
     *
-    * Smile Odontol�ogia
+    * Smile Odontolï¿½ogia
     * Rua Laudemira Maria de Jesus, 51 - Lourdes
     * Arcos - MG - CEP 35588-000
     *
@@ -80,7 +80,7 @@
 		if($row[$campo] == 'Sim') {
 			$chk[$campo]['Sim'] = 'checked';
 		} else {
-			$chk[$campo]['N�o'] = 'checked';
+			$chk[$campo]['Nï¿½o'] = 'checked';
 		}
 	}
 	$acao = '&acao=editar';
@@ -121,7 +121,7 @@
             <td><?php echo $LANG['patients']['is_the_patient_under_medical_and_or_surgical_treatment']?></td>
             <td><input name="tratamento" <?php echo $chk['tratamento']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
               <?php echo $LANG['patients']['yes']?>
-                <input name="tratamento" <?php echo $chk['tratamento']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+                <input name="tratamento" <?php echo $chk['tratamento']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
             <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['reason']?>&nbsp; </div></td>
             <td><input name="motivotrat" value="<?php echo $row['motivotrat']?>" type="text" class="forms" <?php echo $disable?> /></td>
@@ -130,7 +130,7 @@
             <td height="21"><?php echo $LANG['patients']['has_the_patient_been_hospitalized']?> </td>
             <td><input name="hospitalizado" <?php echo $chk['hospitalizado']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="hospitalizado" <?php echo $chk['hospitalizado']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="hospitalizado" <?php echo $chk['hospitalizado']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['reason']?>:&nbsp; </div></td>
             <td><input name="motivohosp" value="<?php echo $row['motivohosp']?>" type="text" class="forms" <?php echo $disable?> /></td>
@@ -139,7 +139,7 @@
             <td><?php echo $LANG['patients']['does_the_patient_suffer_from_cardiovascular_disorders']?></td>
             <td><input name="cardiovasculares" <?php echo $chk['cardiovasculares']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="cardiovasculares" <?php echo $chk['cardiovasculares']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="cardiovasculares" <?php echo $chk['cardiovasculares']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"></div></td>
             <td>&nbsp;</td>
@@ -148,7 +148,7 @@
             <td><?php echo $LANG['patients']['does_the_patient_suffer_some_blood_disorder']?> </td>
             <td><input name="sanguineo" <?php echo $chk['sanguineo']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="sanguineo" <?php echo $chk['sanguineo']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="sanguineo" <?php echo $chk['sanguineo']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"></div></td>
             <td>&nbsp;</td>
@@ -157,7 +157,7 @@
             <td><?php echo $LANG['patients']['does_the_patient_present_a_history_of_rheumatic_fever']?> </td>
             <td><input name="reumatico" <?php echo $chk['reumatico']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="reumatico" <?php echo $chk['reumatico']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="reumatico" <?php echo $chk['reumatico']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"></div></td>
             <td>&nbsp;</td>
@@ -166,7 +166,7 @@
             <td><?php echo $LANG['patients']['does_the_patient_suffer_some_respiratory_disorder']?> </td>
             <td><input name="respiratorio" <?php echo $chk['respiratorio']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="respiratorio" <?php echo $chk['respiratorio']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="respiratorio" <?php echo $chk['respiratorio']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['which']?>?&nbsp;</div></td>
             <td><input name="qualresp" value="<?php echo $row['qualresp']?>" type="text" class="forms" <?php echo $disable?> /></td>
@@ -175,7 +175,7 @@
             <td><?php echo $LANG['patients']['does_the_patient_suffer_some_grastrointestinal_disorder']?> </td>
             <td><input name="gastro" <?php echo $chk['gastro']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="gastro" <?php echo $chk['gastro']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="gastro" <?php echo $chk['gastro']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['which']?>?&nbsp;</div></td>
             <td><input name="qualgastro" value="<?php echo $row['qualgastro']?>" type="text" class="forms" <?php echo $disable?> /></td>
@@ -184,7 +184,7 @@
             <td><?php echo $LANG['patients']['does_the_patient_suffer_a_kidney_disorder']?></td>
             <td><input name="renal" <?php echo $chk['renal']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="renal" <?php echo $chk['renal']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="renal" <?php echo $chk['renal']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"></div></td>
             <td>&nbsp;</td>
@@ -193,7 +193,7 @@
             <td><?php echo $LANG['patients']['is_the_patient_diabetic']?></td>
             <td><input name="diabetico" <?php echo $chk['diabetico']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="diabetico" <?php echo $chk['diabetico']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="diabetico" <?php echo $chk['diabetico']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"></div></td>
             <td>&nbsp;</td>
@@ -202,7 +202,7 @@
             <td><?php echo $LANG['patients']['has_or_had_the_patient_infectious_diseases']?> </td>
             <td><input name="contagiosa" <?php echo $chk['contagiosa']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="contagiosa" <?php echo $chk['contagiosa']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="contagiosa" <?php echo $chk['contagiosa']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['which']?>?&nbsp;</div></td>
             <td><input name="qualcont" value="<?php echo $row['qualcont']?>" type="text" class="forms" <?php echo $disable?> /></td>
@@ -211,7 +211,7 @@
             <td><?php echo $LANG['patients']['did_the_patient_take_dental_anesthesia']?> </td>
             <td><input name="anestesia" <?php echo $chk['anestesia']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="anestesia" <?php echo $chk['anestesia']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="anestesia" <?php echo $chk['anestesia']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['complications']?>&nbsp;</div></td>
             <td><input name="complicacoesanest" value="<?php echo $row['complicacoesanest']?>" type="text" class="forms" <?php echo $disable?> /></td>
@@ -220,7 +220,7 @@
             <td><?php echo $LANG['patients']['is_the_patient_allergic_to_any_medicine']?> </td>
             <td><input name="alergico" <?php echo $chk['alergico']['Sim']?> type="radio" <?php echo $disable?> value="Sim" />
 <?php echo $LANG['patients']['yes']?>
-  <input name="alergico" <?php echo $chk['alergico']['N�o']?> type="radio" <?php echo $disable?> value="N�o" />
+  <input name="alergico" <?php echo $chk['alergico']['Nï¿½o']?> type="radio" <?php echo $disable?> value="Nï¿½o" />
 <?php echo $LANG['patients']['no']?></td>
             <td><div align="right"><?php echo $LANG['patients']['which']?>?&nbsp;</div></td>
             <td><input name="qualalergico" value="<?php echo $row['qualalergico']?>" type="text" class="forms" <?php echo $disable?> /></td>
